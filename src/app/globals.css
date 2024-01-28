@@ -1,29 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground: #0D0D0D;
+  --background: #ffffff;
+  --primary: #FE4A22;
+  --secondary: #FFD025;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--foreground));
+  background: var(--background);
+  font-family: 'Urbanist', sans-serif;
 }
 
 @layer utilities {
@@ -31,3 +21,71 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+.reveal-ramos {
+  color: #0000;
+  background: 
+    linear-gradient(#FE4A22 0 0) no-repeat;
+  background-size: 0% 100%; /* we start at 0% 100% */
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: t 2.5s 0s both;
+}
+
+.slide-up {
+  animation: slide-up 1s ease-in-out;
+}
+
+@keyframes t{
+  to {background-size: 100% 100%} /* we animate to 100% 100%*/
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.text-marquee {
+  width: 90%;
+  display: inline-block;
+  animation: marquee 20s linear infinite alternate;
+}
+
+/* .stacked-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.stacked-cards-container .stacked-card {
+  position: relative;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.stacked-cards-container .stacked-card:not(:first-child) {
+  margin-top: -45%;
+}
+
+.stacked-cards-container .stacked-card:last-child {
+  margin-top: -40%;
+}
+
+.stacked-cards-container .stacked-card:first-child {
+  scale: 0.8;
+}
+.stacked-cards-container .stacked-card:nth-child(2) {
+  scale: 0.90;
+  
+}
+
