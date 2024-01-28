@@ -46,8 +46,14 @@ const reportsList = [
 
 export const DataControl = () => {
     const [progress, setProgress] = useState(0);
+    const [slideUpClass, setSlideUpClass] = useState("");
     const [ref, inView] = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
+        threshold: 0.5,
+        delay: 500,
+    })
+    const [ref2, inView2] = useInView({
+        triggerOnce: true,
         threshold: 0.5,
         delay: 500,
     })
@@ -58,6 +64,13 @@ export const DataControl = () => {
             setProgress(0)
         }
    }, [inView])
+   useEffect(() => {
+        if (inView2) {
+            setSlideUpClass("slide-up")
+        }else {
+            setSlideUpClass("")
+        }
+    }, [inView2])
     return (
         <AppContainer className="py-32">
             <h1 className="text-[8rem] leading-[1.1] font-medium mt-5 text-left text-balance">
@@ -133,14 +146,15 @@ export const DataControl = () => {
                                     </div>
                                     <div className="my-5">
                                         {
-                                            salesList.map((sale) => (
-                                                <div key={sale.title} className="flex justify-between items-center">
-                                                    <div className="flex gap-2 items-center">
-                                                        <Image src={sale.image} width={35} height={35} alt="profile" className="rounded-full" />
-                                                        <p className="text-sm text-gray-500 font-light">{sale.title}</p>
+                                            salesList.map((sale, index) => (
+                                               
+                                                    <div key={sale.title} className="flex justify-between items-center">
+                                                        <div className="flex gap-2 items-center">
+                                                            <Image src={sale.image} width={35} height={35} alt="profile" className="rounded-full" />
+                                                            <p className="text-sm text-gray-500 font-light">{sale.title}</p>
+                                                        </div>
+                                                        <p className="font-medium">{sale.value}</p>
                                                     </div>
-                                                    <p className="font-medium">{sale.value}</p>
-                                                </div>
                                             ))
                                         }
                                     </div>
@@ -172,25 +186,26 @@ export const DataControl = () => {
                         backgroundSize: 'contain'
                     }}>
                     </div>
-                    <div className="w-[90%] mx-auto flex flex-col relative stacked-cards-container">
+                    <div ref={ref2} className="w-[90%] mx-auto flex flex-col relative stacked-cards-container">
                         {
                             reportsList.map((report, index) => (
                                 <div key={index} 
-                                    className={`rounded-3xl bg-white p-5 shadow-lg border stacked-card flex justify-between gap-3 w-full`}>
-                                        <div className="flex flex-col ">
-                                            <div className="flex items-center gap-2">
-                                                <report.icon size="2rem" className="text-dark bg-light p-2 rounded-lg" />
-                                                <p className="font-light">{report.title}</p>
-                                            </div>
-                                            <div className="mt-10 flex-1 flex flex-col justify-end">
-                                                <h5 className="text-gray-500 font-light text-sm">Total profit</h5>
-                                                <h3 className="text-2xl font-medium text-balance mt-2">{report.profit}</h3>
-                                                <Button variant="secondary" className="mt-5 text-dark text-xs px-5 py-2">Data visualization</Button>
-                                            </div>
+                                    className={`rounded-3xl bg-white p-5 shadow-lg border stacked-card flex justify-between gap-3 w-full ${
+                                        index === 2 && slideUpClass === "" ? "opacity-0" : slideUpClass === "slide-up" && index === 2 ? `${slideUpClass}` : index < 2 ? "opacity-100" : "opacity-0"}`}>
+                                    <div className="flex flex-col ">
+                                        <div className="flex items-center gap-2">
+                                            <report.icon size="2rem" className="text-dark bg-light p-2 rounded-lg" />
+                                            <p className="font-light">{report.title}</p>
                                         </div>
-                                        <div className="flex justify-end">
-                                            <Image src={report.chart} width={250} height={250} alt="chart" />
+                                        <div className="mt-10 flex-1 flex flex-col justify-end">
+                                            <h5 className="text-gray-500 font-light text-sm">Total profit</h5>
+                                            <h3 className="text-2xl font-medium text-balance mt-2">{report.profit}</h3>
+                                            <Button variant="secondary" className="mt-5 text-dark text-xs px-5 py-2">Data visualization</Button>
                                         </div>
+                                    </div>
+                                    <div className="flex justify-end">
+                                        <Image src={report.chart} width={250} height={250} alt="chart" />
+                                    </div>
                                 </div>
                             ))
                         }

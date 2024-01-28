@@ -24,7 +24,11 @@ export const GetStartedSection = () => {
                     }
                 },
             }}> 
-                <div className="bg-primary rounded-3xl shadow-2xl flex justify-center items-center w-[6rem] h-[6rem] ">
+                <div className="bg-primary rounded-3xl flex justify-center items-center w-[6rem] h-[6rem]"
+                    style={{
+                        boxShadow: "0px 25px 50px -12px rgba(254, 74, 34, 0.65)"
+                    }}
+                >
                     <LiaLinkSolid size="3rem" className="text-white" />
                 </div>
             </Animate>

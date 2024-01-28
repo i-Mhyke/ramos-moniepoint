@@ -62,7 +62,7 @@ export const SegmentedProgressBar = React.forwardRef<HTMLDivElement, ProgressBar
                         width: `${progress2}%`,
                         transition: "width 1s ease-in-out",
                     }}></div>
-                    <div className="bg-green-500 rounded-xl" style={{ 
+                    <div className="bg-[#8d00f6] rounded-xl" style={{ 
                         width: `${progress3}%`,
                         transition: "width 1s ease-in-out",
                     }}></div>
