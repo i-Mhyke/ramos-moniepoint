@@ -19,7 +19,7 @@ export const EfficiencySection = () => {
                     <TextAnimate text="with our intuitive" />
                 </h1>
                 <div className="flex max-lg:flex-col-reverse justify-between mt-5">
-                    <div className="flex items-center max-lg:mt-10">
+                    <div className="flex max-lg:justify-center items-center max-lg:mt-10">
                         <Animate className="" once={false} animation={{
                                     hidden: {
                                         scale: 0
@@ -32,7 +32,7 @@ export const EfficiencySection = () => {
                                         }
                                     },
                                 }}> 
-                            <div className="flex justify-center items-center relative w-48 h-48 bg-[#f2f2f2] rounded-full -mr-5">
+                            <div className="flex justify-center items-center relative max-lg:w-40 max-lg:h-40 w-48 h-48 bg-[#f2f2f2] rounded-full -mr-5">
                                 <RiPulseLine size="3rem" className="fill-white bg-primary rounded-xl p-2 relative z-10" />
                                 <div className="absolute w-[70%] h-[1px] border-t-2 border-dotted border-primary/70 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
                             </div>
@@ -49,7 +49,7 @@ export const EfficiencySection = () => {
                                     }
                                 },
                             }}> 
-                            <div className="flex flex-col justify-center items-center relative w-48 h-48 bg-secondary rounded-full ">
+                            <div className="flex flex-col justify-center items-center relative max-lg:w-40 max-lg:h-40 w-48 h-48 bg-secondary rounded-full ">
                                 <h4 className="text-3xl font-semibold">+30%</h4>
                                 <p className="w-[60%] text-center text-sm">Speed up your productivity</p>
                             </div>

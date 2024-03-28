@@ -73,7 +73,7 @@ export const Hero = () => {
                             <IoAnalyticsSharp className="text-[#f2f2f2] max-lg:text-[3rem] text-[7rem] rounded-full max-lg:p-2 p-5 bg-primary -ml-4" />
                         </Animate>
                     </div>
-                    <h1 className="max-lg:text-[2.5rem] text-[8rem] max-lg:leading-[1.2] leading-[1.1] font-medium mt-5 text-right overflow-y-hidden-hidden">
+                    <h1 className="max-[360px]:text-[2.3rem] max-lg:text-[2.5rem] text-[8rem] max-lg:leading-[1.2] leading-[1.1] font-medium mt-5 text-right overflow-y-hidden-hidden">
                         <TextAnimate text="Analytics" className="" />
                         <br />
                         <TextAnimate text="that helps you" styleIndex={{

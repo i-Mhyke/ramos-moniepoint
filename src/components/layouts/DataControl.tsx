@@ -73,7 +73,7 @@ export const DataControl = () => {
     }, [inView2])
     return (
         <AppContainer className="max-lg:py-20 py-32">
-            <h1 className="max-lg:text-[3rem] text-[8rem] leading-[1.1] font-medium mt-5 text-left text-balance">
+            <h1 className="max-lg:text-[2.7rem] text-[8rem] leading-[1.1] font-medium mt-5 text-left text-balance">
                 <TextAnimate text="We give you full" className="py-2" />
                 <TextAnimate text="control over your data" styleIndex={{
                         index: 0,

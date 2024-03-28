@@ -37,7 +37,7 @@ export const InsightsSection = () => {
     }, [inView2])
     return (
         <div className="bg-light rounded-t-[100px] rounded-b-[100px] pb-24 relative">
-            <AppContainer className="py-32 lg:pr-0 z-10 relative">
+            <AppContainer className="max-lg:py-24 py-32 lg:pr-0 z-10 relative">
                 <div className="flex max-lg:flex-col overflow-hidden">
                     <div className="flex flex-col max-lg:w-full w-[35%]">
                     <Animate className="overflow-hidden py-2" once={false} animation={{
@@ -110,8 +110,8 @@ export const InsightsSection = () => {
                 left: '0',
                 background: "url('/images/squares-fig.png') repeat center center/contain"
             }}>
-                <AppContainer className="absolute max-lg:bottom-0 lg:-top-[7rem] left-1/2 -translate-x-1/2" ref={ref}>
-                    <h1 className={`font-semibold max-lg:text-[10rem] text-[27rem] text-primary ${revealClass === "" ? "opacity-0" : revealClass}`}>
+                <AppContainer className="absolute max-lg:bottom-10 lg:-top-[7rem] left-1/2 -translate-x-1/2" ref={ref}>
+                    <h1 className={`font-semibold max-lg:text-[6.7rem] text-[27rem] text-primary ${revealClass === "" ? "opacity-0" : revealClass}`}>
                         Ramos
                     </h1>
                     {/* <h1 className="font-semibold text-[27rem] text-primary">
