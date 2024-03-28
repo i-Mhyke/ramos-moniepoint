@@ -27,8 +27,8 @@ export const MetricsSection = () => {
     return (
         <div className="bg-light rounded-t-[100px] rounded-b-[100px]">
             <AppContainer className="py-20">
-                <div className="flex justify-between items-center">
-                    <div className="w-[70%]">
+                <div className="flex max-lg:flex-col justify-between items-center">
+                    <div className="max-lg:w-full w-[70%]">
                         <Animate className="overflow-hidden py-2" animation={{
                             hidden: {
                                 y: 100,
@@ -42,12 +42,12 @@ export const MetricsSection = () => {
                                 }
                             },
                         }}>                            
-                            <h3 className="text-6xl font-medium text-balance">
+                            <h3 className="text-6xl max-lg:text-4xl font-medium lg:text-balance">
                                 Your key to strategic success through analytics
                             </h3>
                         </Animate>
                     </div>
-                    <div className="w-[30%] flex justify-end">
+                    <div className="max-lg:w-full w-[30%] flex justify-end">
                         <Animate className="overflow-hidden py-2" animation={{
                             hidden: {
                                 y: 100,
@@ -62,13 +62,13 @@ export const MetricsSection = () => {
                                 }
                             },
                         }}> 
-                            <p className="text-balance text-2xl">Ready for exciting, instantaneous, all-accessible insights in real time?</p>
+                            <p className="lg:text-balance text-2xl max-lg:text-lg ">Ready for exciting, instantaneous, all-accessible insights in real time?</p>
                         </Animate>
                     </div>
                 </div>
-                <div className="flex justify-between gap-5" ref={ref} >
-                    <div className="w-[60%] rounded-2xl bg-white border border-gray-200 mt-10 flex shadow-2xl">
-                        <div className="p-12 w-6/12 flex flex-col">
+                <div className="flex max-lg:flex-col justify-between gap-5" ref={ref} >
+                    <div className="max-lg:w-full w-[60%] rounded-2xl bg-white border border-gray-200 mt-10 flex max-lg:flex-col shadow-2xl">
+                        <div className="p-12 max-lg:p-7 max-lg:w-full w-6/12 flex flex-col">
                             <Animate className="" animation={{
                                 hidden: {
                                     scale: 0.5
@@ -81,12 +81,12 @@ export const MetricsSection = () => {
                                     }
                                 },
                             }}> 
-                                <div className="bg-secondary w-fit shadow-xl text-dark p-2 rounded-lg">
+                                <div className="bg-secondary w-fit shadow-xl text-dark p-2 rounded-lg max-lg:mb-5 max-lg:text-sm">
                                     Setting up reports
                                 </div>
                             </Animate>
                             <div className="flex-1 flex flex-col justify-end">
-                                <h4 className="text-3xl font-medium">Fast and easy access to analytics</h4>
+                                <h4 className="text-3xl max-lg:text-2xl font-medium">Fast and easy access to analytics</h4>
                                 <Animate className="" viewDelay={0.5} animation={{
                                     hidden: {
                                         opacity: 0.1,
@@ -103,11 +103,11 @@ export const MetricsSection = () => {
                                         }
                                     },
                                 }}> 
-                                    <p className="text-xl mt-5 text-gray-500 font-light">One platform is a comprehensive system of solutions that will be the first step towards digitization of your business!</p>
+                                    <p className="max-lg:text-base text-xl mt-5 text-gray-500 font-light">One platform is a comprehensive system of solutions that will be the first step towards digitization of your business!</p>
                                 </Animate>
                             </div>
                         </div>
-                        <div className="p-5 mt-10 border-t border-l rounded-tl-2xl border-gray-200 w-6/12">
+                        <div className="p-5 mt-10 border-t border-l rounded-tl-2xl border-gray-200 w-6/12 max-lg:w-full">
                             <h5 className="text-xl font-medium">Sales Statistics</h5>
                             <Animate className="" viewDelay={0.5} animation={{
                                 hidden: {
@@ -171,7 +171,7 @@ export const MetricsSection = () => {
                             </Animate>
                         </div>
                     </div>
-                    <div className="w-[40%] rounded-3xl bg-dark border border-dark mt-10 p-20 shadow-2xl">
+                    <div className="max-lg:w-full w-[40%] rounded-3xl bg-dark border border-dark mt-10 max-lg:p-8 p-20 shadow-2xl">
                         <div className="grid grid-cols-2 gap-2">
                             <div className="bg-[#1c1919] rounded-3xl border border-gray-800 p-5 flex flex-col items-center">
                                 <HiOutlineSquare3Stack3D size="2.5rem" className="text-secondary" />
@@ -198,12 +198,12 @@ export const MetricsSection = () => {
                                         <BsFillArrowUpCircleFill size="1rem" className="inline mr-1" />
                                         +12%
                                     </sup>
-                                    <h2 className="text-6xl font-base mt-2 text-white"><CounterAnimation value={43} />k</h2>
+                                    <h2 className="max-lg:text-5xl text-6xl font-base mt-2 text-white"><CounterAnimation value={43} />k</h2>
                                 </div>
                             </Animate>
                         </div>
                         <div className="mt-10 text-center">
-                        <h4 className="font-medium text-white text-2xl mb-5">Widget control</h4>
+                        <h4 className="font-medium text-white max-lg:text-xl text-2xl mb-5">Widget control</h4>
 
                             <Animate className="" viewDelay={0.5} animation={{
                                 hidden: {
@@ -221,12 +221,12 @@ export const MetricsSection = () => {
                                     }
                                 },
                             }}> 
-                                <p className="text-white/70 font-light text-lg">Reports provide a comprehensive overview of important aspects of web analytics</p>
+                                <p className="text-white/70 font-light text-lg max-lg:text-base">Reports provide a comprehensive overview of important aspects of web analytics</p>
                             </Animate>
                         </div>
                     </div>
                 </div>
-                <div className="flex w-[60%] mx-auto items-center mt-16 relative">
+                <div className="max-lg:w-full flex max-lg:flex-col w-[60%] mx-auto items-center max-lg:mt-10 mt-16 px-5 relative">
                     <p className="text-3xl font-medium mr-2 relative -bottom-8 text-nowrap">Up to</p>
                     <h1 className="text-[8rem] font-medium mr-2">45%</h1>
                     <Animate className="" viewDelay={0.5} animation={{

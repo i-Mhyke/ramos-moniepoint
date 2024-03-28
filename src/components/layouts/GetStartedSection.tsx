@@ -33,7 +33,7 @@ export const GetStartedSection = () => {
                 </div>
             </Animate>
             <div className="max-w-2xl text-center">
-                <h1 className="text-[8rem] font-medium mt-3 text-nowrap">
+                <h1 className="max-lg:text-[3rem] text-[8rem] font-medium mt-3 text-nowrap">
                     <WordAnimate text="Get started" animation={{
                         hidden: {
                             y: 50,
@@ -52,7 +52,7 @@ export const GetStartedSection = () => {
                         },
                     }} />
                 </h1>
-                <p className="text-2xl text-balance text-gray-500">Turn information into advantage! Start using Ramos today. Signup for a free trial.</p>
+                <p className="max-lg:text-lg text-2xl text-balance text-gray-500">Turn information into advantage! Start using Ramos today. Signup for a free trial.</p>
                     <Animate className="" once={false} animation={{
                         hidden: {
                             scale: 0.3,
@@ -69,7 +69,7 @@ export const GetStartedSection = () => {
                         },
                         
                     }}> 
-                        <div className="flex gap-4 mt-16 justify-center">
+                        <div className="flex gap-4 mt-16 max-lg:flex-col justify-center">
                             <Button variant="light" className="min-w-[200px]">Request a demo</Button>
                             <Button variant="primary" className="min-w-[200px]" >Start for free</Button>
                         </div>

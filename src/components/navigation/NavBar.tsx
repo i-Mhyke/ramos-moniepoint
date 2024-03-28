@@ -49,7 +49,7 @@ export const NavBar = () => {
                         <h4 className="font-semibold ml-1 text-lg">ramos</h4>
                     </div>
                 </Animate>
-                <Animate className="" viewDelay={0} once={true} animation={{
+                <Animate className="max-lg:hidden" viewDelay={0} once={true} animation={{
                         hidden: {
                             y: 50,
                         },

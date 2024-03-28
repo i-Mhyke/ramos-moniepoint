@@ -22,11 +22,11 @@ export const Footer = () => {
     return (
         <div className="bg-dark text-white pt-10">
             <AppContainer className="py-20">
-                <div className="flex justify-between items-center">
+                <div className="flex max-lg:flex-col max-lg:items-start max-lg:gap-5 justify-between items-center">
                     <div className="flex gap-5">
                         {
                             footerLinks.map((link) => (
-                                <a key={link} href="#" className="text-light/50 text-2xl">{link}</a>
+                                <a key={link} href="#" className="text-light/50 max-lg:text-base text-2xl">{link}</a>
                             ))
                         }
                     </div>
@@ -44,13 +44,13 @@ export const Footer = () => {
                             }
                         },
                     }}> 
-                    <a href="mailto:hello@ramos.com" className="font-medium text-6xl">
+                    <a href="mailto:hello@ramos.com" className="font-medium max-lg:text-3xl text-6xl">
                         hello@ramos.com
                     </a>
                     </Animate>
                 </div>
-                <div className="border-t border-light/50 mt-20 pt-20 flex justify-between">
-                    <div className="flex w-[35%] justify-between">
+                <div className="border-t border-light/50 mt-20 pt-20 flex max-lg:flex-col justify-between">
+                    <div className="flex max-lg:w-full w-[35%] justify-between">
                         {
                             address.map((addressItem) => (
                                 <Animate className="" key={addressItem.region} once={false} animation={{
@@ -76,16 +76,16 @@ export const Footer = () => {
                             ))
                         }
                     </div>
-                    <div className="flex flex-col gap-5">
+                    <div className="flex max-lg:flex-row max-lg:mt-5 flex-col gap-5">
                         {
                             socialLinks.map((link) => (
-                                <a key={link} href="#" className="text-light/70 text-2xl text-right">{link}</a>
+                                <a key={link} href="#" className="text-light/70 max-lg:text-xl text-2xl text-right">{link}</a>
                             ))
                         }
                     </div>
                 </div>
-                <div className="mt-10 flex justify-between gap-20">
-                    <h1 className="text-[11rem] leading-[1.1] font-medium text-nowrap">
+                <div className="mt-10 flex max-lg:flex-col justify-between gap-20">
+                    <h1 className="max-lg:text-[6rem] text-[11rem] leading-[1.1] font-medium text-nowrap">
                         <TextAnimate text="Ramos" animation={{
                             hidden: {
                                 y: 50,
@@ -103,7 +103,7 @@ export const Footer = () => {
                         }} />
                         <sup className="text-3xl align-super -ml-7">&#9415;</sup>
                     </h1>
-                    <div className="flex items-center w-1/2 justify-between">
+                    <div className="flex max-lg:w-full items-center w-1/2 justify-between">
                         <a href="#" className="text-light/50 text-xl">Privacy policy</a>
                         <a href="#" className="text-light/50 text-xl">License agreement</a>
                         <Animate className="" once={false} animation={{

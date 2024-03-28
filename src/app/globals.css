@@ -89,3 +89,12 @@ body {
   
 }
 
+@media not all and (min-width: 1024px) {
+  .stacked-cards-container .stacked-card:not(:first-child) {
+    margin-top: -65%;
+  }
+  
+  .stacked-cards-container .stacked-card:last-child {
+    margin-top: -60%;
+  }
+}

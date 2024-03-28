@@ -72,8 +72,8 @@ export const DataControl = () => {
         }
     }, [inView2])
     return (
-        <AppContainer className="py-32">
-            <h1 className="text-[8rem] leading-[1.1] font-medium mt-5 text-left text-balance">
+        <AppContainer className="max-lg:py-20 py-32">
+            <h1 className="max-lg:text-[3rem] text-[8rem] leading-[1.1] font-medium mt-5 text-left text-balance">
                 <TextAnimate text="We give you full" className="py-2" />
                 <TextAnimate text="control over your data" styleIndex={{
                         index: 0,
@@ -81,8 +81,8 @@ export const DataControl = () => {
                     }} />
                 {/* We give you full <span className="text-[#cccccc]">control</span> over your data  */}
             </h1>
-            <div className="grid grid-cols-2 gap-10 mt-20">
-                <div className="rounded-3xl border bg-light p-14 relative">
+            <div className="grid max-lg:grid-cols-1 grid-cols-2 gap-10 mt-20">
+                <div className="rounded-3xl border bg-light max-lg:p-5 p-14 relative">
                     <div style={{
                         width: '100%',
                         height: '60%',
@@ -95,8 +95,8 @@ export const DataControl = () => {
                         backgroundSize: 'contain'
                     }}>
                     </div>
-                    <div className="relative flex">
-                        <div className="bg-white rounded-3xl p-12 text-center w-[50%] space-y-5 shadow-2xl">
+                    <div className="relative flex max-lg:flex-col">
+                        <div className="bg-white rounded-3xl p-12 text-center max-lg:w-full w-[50%] space-y-5 shadow-2xl">
                             <h5 className="text-lg font-medium">Conversion rate</h5>
                             <div className="relative w-full p-5 rounded-3xl animate-background-color" ref={ref}>
                                 <Animate className="absolute -top-3 -left-3 z-[1]" once={false} animation={{
@@ -124,7 +124,7 @@ export const DataControl = () => {
                             </div>
                             <p className="text-gray-500 text-balance text-lg font-light">Percentage of website visitors</p>
                         </div>
-                            <Animate className="w-[50%]" once={false} animation={{
+                            <Animate className="max-lg:w-full w-[50%]" once={false} animation={{
                                     hidden: {
                                         x: -20
                                     },
@@ -138,7 +138,7 @@ export const DataControl = () => {
                                         }
                                     },
                                 }}> 
-                                <div className="bg-white rounded-3xl p-5 w-[100%] relative -ml-8 top-10 shadow-2xl flex flex-col">
+                                <div className="bg-white rounded-3xl p-5 w-[100%] relative lg:-ml-8 top-10 shadow-2xl flex flex-col">
                                     <h5 className="font-light text-gray-500">Sales revenue</h5>
                                     <h3 className="text-3xl font-base text-balance my-3"><span className="text-xl font-normal">$</span> 131,2K</h3>
                                     <div className="my-3" ref={ref}>
@@ -165,15 +165,15 @@ export const DataControl = () => {
                                 </div>
                             </Animate>
                     </div>
-                    <div className="text-center pt-14 px-8">
-                        <h4 className="font-medium text-3xl mt-10">Improved customer service</h4>
-                        <p className="text-gray-500 text-lg font-light mt-4">
+                    <div className="text-center pt-14 px-8 max-lg:px-2">
+                        <h4 className="font-medium max-lg:text-2xl text-3xl mt-10">Improved customer service</h4>
+                        <p className="text-gray-500 max-lg:text-base text-lg font-light mt-4">
                             Analytics helps optimize service processes by providing information on how to 
                             improve interactions with customers and increase their satisfaction.
                         </p>
                     </div>
                 </div>
-                <div className="rounded-3xl border bg-light p-14 relative">
+                <div className="rounded-3xl border bg-light p-14 max-lg:p-5 relative">
                     <div style={{
                         width: '100%',
                         height: '60%',
@@ -186,7 +186,7 @@ export const DataControl = () => {
                         backgroundSize: 'contain'
                     }}>
                     </div>
-                    <div ref={ref2} className="w-[90%] mx-auto flex flex-col relative stacked-cards-container">
+                    <div ref={ref2} className="max-lg:w-full w-[90%] mx-auto flex flex-col relative stacked-cards-container">
                         {
                             reportsList.map((report, index) => (
                                 <div key={index} 
@@ -210,9 +210,9 @@ export const DataControl = () => {
                             ))
                         }
                     </div>
-                    <div className="text-center pt-5 px-14">
-                        <h4 className="font-medium text-3xl mt-10">Monitoring key indicators</h4>
-                        <p className="text-gray-500 text-lg font-light mt-4">
+                    <div className="text-center pt-5 px-14 max-lg:px-2">
+                        <h4 className="font-medium text-3xl max-lg:text-2xl mt-10">Monitoring key indicators</h4>
+                        <p className="text-gray-500 text-lg max-lg:text-base font-light mt-4">
                             Analytics platforms allow businesses to track KPIs, an important tool for measuring success and achieving goals.
                         </p>
                     </div>

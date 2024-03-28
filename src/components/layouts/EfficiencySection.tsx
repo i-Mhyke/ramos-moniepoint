@@ -11,15 +11,15 @@ export const EfficiencySection = () => {
     return (
         <AppContainer className="py-32">
             <div>
-                <h1 className="text-[8rem] leading-[1.1] font-medium mt-5 text-left">
+                <h1 className="max-lg:text-[2.3rem] text-[8rem] leading-[1.1] font-medium mt-5 text-left">
                     <TextAnimate text="Maximize efficiency" styleIndex={{
                             index: 1,
                             className: "text-[#d2d2d2]",
                         }} />
                     <TextAnimate text="with our intuitive" />
                 </h1>
-                <div className="flex justify-between mt-5">
-                    <div className="flex items-center">
+                <div className="flex max-lg:flex-col-reverse justify-between mt-5">
+                    <div className="flex items-center max-lg:mt-10">
                         <Animate className="" once={false} animation={{
                                     hidden: {
                                         scale: 0
@@ -68,14 +68,14 @@ export const EfficiencySection = () => {
                                     }
                                 },
                             }}> 
-                        <div className="w-[500px] overflow-hidden rounded-[5rem] py-1 bg-secondary h-fit">
-                            <h1 className="text-[8rem] font-medium text-left text-nowrap text-marquee">
+                        <div className="max-lg:w-full w-[500px] overflow-hidden max-lg:rounded-3xl rounded-[5rem] py-1 bg-secondary h-fit">
+                            <h1 className="max-lg:text-[2.3rem] text-[8rem] font-medium max-lg:ml-5 text-left text-nowrap lg:text-marquee">
                                 analytics service
                             </h1>
                         </div>
                     </Animate>
                 </div>
-                <div className="flex justify-between py-16 mt-20 border-t">
+                <div className="flex max-lg:flex-col justify-between max-lg:py-10 py-16 mt-20 border-t">
                     <Animate className="overflow-hidden py-2" once={false} animation={{
                                 hidden: {
                                     y: 100,
@@ -90,7 +90,7 @@ export const EfficiencySection = () => {
                                     }
                                 },
                             }}> 
-                        <p className="text-lg max-w-2xl">
+                        <p className="max-lg:text-base text-lg max-w-2xl">
                             Explore traffic sources, page behaviour, conversions and more 
                             to gain deep insight into your audience. With us, your business 
                             doesn&apos;t just adapt - it evolves
@@ -109,7 +109,7 @@ export const EfficiencySection = () => {
                                     }
                                 },
                             }}> 
-                        <div className="flex gap-4">
+                        <div className="flex max-lg:flex-col gap-4 max-lg:mt-5">
                             <Button variant="light" className="min-w-[200px]">Request a demo</Button>
                             <Button variant="primary" className="min-w-[200px]" >Start for free</Button>
                         </div>

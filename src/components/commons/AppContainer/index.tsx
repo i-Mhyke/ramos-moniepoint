@@ -13,7 +13,7 @@ export const AppContainer = React.forwardRef<HTMLDivElement, AppContainerProps>(
       <div
         {...props}
         ref={ref}
-        className={cn('container max-w-[1440px] mx-auto px-4 sm:px-7 md:px-10 lg:px-14', className)}
+        className={cn('container max-w-[1440px] mx-auto px-4 sm:px-7 md:px-10 lg:px-8 xl:px-14', className)}
       >
         {children}
       </div>

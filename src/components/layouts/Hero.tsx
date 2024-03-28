@@ -10,8 +10,8 @@ import { Animate } from "../commons/Animations"
 
 export const Hero = () => {
     return (
-        <AppContainer className="h-[90vh] max-h-[720px] pt-20">
-            <div className="mx-auto relative">
+        <AppContainer className="max-lg:h-auto h-[90vh] lg:max-h-[720px] pt-20 max-lg:pb-14">
+            <div className="mx-auto relative max-lg:flex max-lg:flex-col">
                 <div className="float-right ml-5 relative">
                     <div className="w-[3rem] h-[3rem] flex justify-center items-center bg-primary rounded-full absolute -top-3 -left-3 shadow-lg z-10">
                         <FaPlay size='1.1rem' className="fill-white" />
@@ -39,7 +39,7 @@ export const Hero = () => {
                         </Animate>
                 </div>
                 <div className="relative">
-                    <div className="h-[7rem] flex items-center mt-5 absolute top-0 left-36">
+                    <div className="max-lg:h-[3rem] h-[7rem] flex items-center mt-5 absolute top-0 max-lg:left-14 lg:left-36">
                         <Animate animation={{
                             hidden: {
                                 scale: 0.2,
@@ -54,7 +54,7 @@ export const Hero = () => {
                                 }
                             },
                         }}>
-                            <PiLightningFill size="7rem" className="text-primary rounded-full p-5 bg-[#f2f2f2]" />
+                            <PiLightningFill className="text-primary max-lg:text-[3rem] text-[7rem] rounded-full max-lg:p-2 p-5 bg-[#f2f2f2]" />
                         </Animate>
                         <Animate animation={{
                             hidden: {
@@ -70,10 +70,10 @@ export const Hero = () => {
                                 }
                             },
                         }}>
-                            <IoAnalyticsSharp size="7rem" className="text-[#f2f2f2] rounded-full p-5 bg-primary -ml-4" />
+                            <IoAnalyticsSharp className="text-[#f2f2f2] max-lg:text-[3rem] text-[7rem] rounded-full max-lg:p-2 p-5 bg-primary -ml-4" />
                         </Animate>
                     </div>
-                    <h1 className="text-[8rem] leading-[1.1] font-medium mt-5 text-right overflow-y-hidden-hidden">
+                    <h1 className="max-lg:text-[2.5rem] text-[8rem] max-lg:leading-[1.2] leading-[1.1] font-medium mt-5 text-right overflow-y-hidden-hidden">
                         <TextAnimate text="Analytics" className="" />
                         <br />
                         <TextAnimate text="that helps you" styleIndex={{
@@ -83,7 +83,7 @@ export const Hero = () => {
                         &nbsp;&nbsp;
                         <br />
                         <TextAnimate text="shape" />
-                        <Animate className="inline-flex relative -bottom-2" animation={{
+                        <Animate className="inline-flex relative max-lg:bottom-1 -bottom-2" animation={{
                             hidden: {
                                 scale: 0.1,
                             },
@@ -96,10 +96,22 @@ export const Hero = () => {
                                 }
                             },
                         }}>
-                            <FiBarChart2 size="7rem" className="text-dark rounded-full p-5 bg-secondary inline" />
+                            <FiBarChart2 className="text-dark max-lg:text-[2.5rem] text-[7rem] rounded-full max-lg:p-2 p-5 bg-secondary inline" />
                         </Animate>
                         &nbsp;
-                        <TextAnimate text="the future" animationDelay={0.5} animation={{
+                        {/* <TextAnimate className="lg:hidden" text="now" animationDelay={0.5} animation={{
+                                hidden: {
+                                    y: 200,
+                                },
+                                visible: {
+                                    y: 0,
+                                    transition: {
+                                        duration: 1,
+                                        ease: "easeInOut",
+                                    }
+                                },
+                            }} /> */}
+                        <TextAnimate text="the future" animationDelay={0.8} animation={{
                                 hidden: {
                                     y: 200,
                                 },

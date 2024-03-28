@@ -38,8 +38,8 @@ export const InsightsSection = () => {
     return (
         <div className="bg-light rounded-t-[100px] rounded-b-[100px] pb-24 relative">
             <AppContainer className="py-32 lg:pr-0 z-10 relative">
-                <div className="flex overflow-hidden">
-                    <div className="flex flex-col w-[35%]">
+                <div className="flex max-lg:flex-col overflow-hidden">
+                    <div className="flex flex-col max-lg:w-full w-[35%]">
                     <Animate className="overflow-hidden py-2" once={false} animation={{
                             hidden: {
                                 y: 100,
@@ -54,7 +54,7 @@ export const InsightsSection = () => {
                                 }
                             },
                         }}> 
-                        <h3 className="font-medium text-5xl text-balance mb-20">Turning data into real actions and ideas</h3>
+                        <h3 className="font-medium max-lg:text-3xl text-5xl text-balance max-lg:mb-5 mb-20">Turning data into real actions and ideas</h3>
                         </Animate>
                         {
                             insightsList.map((insight, index) => (
@@ -71,19 +71,19 @@ export const InsightsSection = () => {
                                         }
                                     },
                                 }}> 
-                                <div  className="bg-white rounded-3xl px-5 py-3 mt-5 flex justify-between items-center w-[80%] shadow-xl">
-                                    <h4 className="text-xl">{insight}</h4>
-                                    <div className="flex items-center justify-center w-14 h-14 bg-[#f2f2f2] rounded-full">
-                                        <HiOutlinePlusSm size={20} className="text-dark" />
+                                <div  className="bg-white rounded-3xl px-5 py-3 mt-5 flex justify-between items-center max-lg:w-full w-[80%] shadow-xl">
+                                    <h4 className="text-xl max-lg:text-base">{insight}</h4>
+                                    <div className="flex items-center justify-center max-lg:w-10 max-lg:h-10 w-14 h-14 bg-[#f2f2f2] rounded-full">
+                                        <HiOutlinePlusSm className="text-dark text-xl max-lg:text-base" />
                                     </div>
                                 </div>
                                 </Animate>
                             ))
                         }
                     </div>
-                    <div ref={ref2} className="w-[65%] flex relative justify-end h-[680px] -right-48">
-                        <Image src="/images/dash-phone.png" alt="insights" width={300} height={700} className="relative -bottom-36 left-32 h-fit z-10" />
-                        <Animate className="absolute -left-32 bottom-10 z-10" once={false} animation={{
+                    <div ref={ref2} className="max-lg:w-full max-lg:mt-10 w-[65%] flex relative justify-end max-lg:h-auto h-[680px] lg:-right-48">
+                        <Image src="/images/dash-phone.png" alt="insights" width={300} height={700} className="relative max-lg:hidden -bottom-36 left-32 h-fit z-10" />
+                        <Animate className="absolute max-lg:hidden -left-32 bottom-10 z-10" once={false} animation={{
                             hidden: {
                                 y: 100,
                             },
@@ -96,13 +96,13 @@ export const InsightsSection = () => {
                                 }
                             },
                         }}> 
-                            <Image src="/images/animate-phone.png" alt="insights" width={215} height={350} className="h-fit z-20 " />
+                            <Image src="/images/animate-phone.png" alt="insights" width={215} height={350} className="h-fit z-20" />
                         </Animate>
                         <Image  src="/images/dash-Tab.png" alt="insights" width={1000} height={600} className={`h-fit ${slideUpClass === "" ? "opacity-0" : slideUpClass}`} />
                     </div>
                 </div>
             </AppContainer>
-            <div style={{
+            <div className="max-lg:overflow-hidden" style={{
                 width: '100%',
                 height: '40%',
                 position: 'absolute',
@@ -110,8 +110,8 @@ export const InsightsSection = () => {
                 left: '0',
                 background: "url('/images/squares-fig.png') repeat center center/contain"
             }}>
-                <AppContainer className="absolute -top-[7rem] left-1/2 -translate-x-1/2" ref={ref}>
-                    <h1 className={`font-semibold text-[27rem] text-primary ${revealClass === "" ? "opacity-0" : revealClass}`}>
+                <AppContainer className="absolute max-lg:bottom-0 lg:-top-[7rem] left-1/2 -translate-x-1/2" ref={ref}>
+                    <h1 className={`font-semibold max-lg:text-[10rem] text-[27rem] text-primary ${revealClass === "" ? "opacity-0" : revealClass}`}>
                         Ramos
                     </h1>
                     {/* <h1 className="font-semibold text-[27rem] text-primary">
