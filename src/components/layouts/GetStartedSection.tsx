@@ -70,8 +70,8 @@ export const GetStartedSection = () => {
                         
                     }}> 
                         <div className="flex gap-4 mt-16 max-lg:flex-col justify-center">
-                            <Button variant="light" className="min-w-[200px]">Request a demo</Button>
-                            <Button variant="primary" className="min-w-[200px]" >Start for free</Button>
+                            <Button variant="light" className="min-w-[200px] py-4">Request a demo</Button>
+                            <Button variant="primary" className="min-w-[200px] py-4" >Start for free</Button>
                         </div>
                     </Animate>
             </div>
