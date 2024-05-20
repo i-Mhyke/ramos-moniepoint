@@ -111,7 +111,7 @@ export const InsightsSection = () => {
                 background: "url('/images/squares-fig.png') repeat center center/contain"
             }}>
                 <AppContainer className="absolute max-lg:bottom-10 lg:-top-[7rem] left-1/2 -translate-x-1/2" ref={ref}>
-                    <h1 className={`font-semibold max-lg:text-[6.7rem] text-[27rem] text-primary ${revealClass === "" ? "opacity-0" : revealClass}`}>
+                    <h1 className={`font-semibold max-md:text-[6.8rem] max-lg:text-[14rem] max-lg:text-center text-[27rem] text-primary ${revealClass === "" ? "opacity-0" : revealClass}`}>
                         Ramos
                     </h1>
                     {/* <h1 className="font-semibold text-[27rem] text-primary">
