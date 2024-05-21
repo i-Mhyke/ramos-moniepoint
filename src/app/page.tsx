@@ -6,7 +6,7 @@ import { Hero } from "@/components/layouts/Hero";
 import { InsightsSection } from "@/components/layouts/InsightsSection";
 import { MetricsSection } from "@/components/layouts/MetricsSection";
 import { Footer } from "@/components/navigation/Footer";
-import { NavBar } from "@/components/navigation/NavBar";
+import { BottomBar, NavBar } from "@/components/navigation/NavBar";
 import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -23,8 +23,9 @@ export default function Home() {
   )
   return (
     <AnimatePresence mode="sync" initial={true}>
-      <main >
+      <main>
         <NavBar />
+        <BottomBar />
         <Hero />
         <MetricsSection />
         <EfficiencySection />
