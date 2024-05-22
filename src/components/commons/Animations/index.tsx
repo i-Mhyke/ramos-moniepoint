@@ -1,5 +1,5 @@
 'use client'
-import { Variant, motion, useAnimation, useInView } from "framer-motion";
+import { TargetAndTransition, Variant, VariantLabels, motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface AnimateProps {
@@ -10,6 +10,7 @@ interface AnimateProps {
         hidden: Variant;
         visible: Variant;
     };
+    exitControls?: TargetAndTransition | VariantLabels;
     animationDelay?: number;
     children: React.ReactNode;
     viewDelay?: number;
@@ -39,6 +40,7 @@ export const Animate = ({
     children,
     viewDelay = 0.5,
     innerClassName,
+    exitControls,
 }: AnimateProps) => {
     const controls = useAnimation();
     const ref = useRef(null);
@@ -62,6 +64,7 @@ export const Animate = ({
                     hidden: {},
                 }}
                 className={className}
+                exit={exitControls}
             >
                 <motion.div
                     variants={animation}
