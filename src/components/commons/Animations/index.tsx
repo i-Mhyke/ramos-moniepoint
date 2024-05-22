@@ -1,20 +1,20 @@
 'use client'
-import { TargetAndTransition, Variant, VariantLabels, motion, useAnimation, useInView } from "framer-motion";
+import { TargetAndTransition, Variant, VariantLabels, Variants, motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface AnimateProps {
     className?: string;
     once?: boolean;
     duration?: number;
-    animation?: {
-        hidden: Variant;
-        visible: Variant;
-    };
+    animation?: Variants;
     exitControls?: TargetAndTransition | VariantLabels;
     animationDelay?: number;
     children: React.ReactNode;
     viewDelay?: number;
     innerClassName?: string;
+    initial?: VariantLabels;
+    animateStart?: VariantLabels;
+    variants?: Variants;
 }
 const defaultAnimations = {
     hidden: {
@@ -41,6 +41,12 @@ export const Animate = ({
     viewDelay = 0.5,
     innerClassName,
     exitControls,
+    initial = "hidden",
+    animateStart = "visible",
+    variants = {
+        visible: { transition: { staggerChildren: 0.1  } },
+        hidden: {},
+    }
 }: AnimateProps) => {
     const controls = useAnimation();
     const ref = useRef(null);
@@ -48,23 +54,19 @@ export const Animate = ({
 
     useEffect(() => {
         if (isInView) {
-            controls.start("visible");
+            controls.start(animateStart);
         }else {
-            controls.start("hidden");
+            controls.start(initial);
         }
     }, [isInView])
     return (
         <>
             <motion.div
                 ref={ref}
-                initial="hidden"
+                initial={initial}
                 animate={controls}
-                variants={{
-                    visible: { transition: { staggerChildren: 0.1  } },
-                    hidden: {},
-                }}
+                variants={variants}
                 className={className}
-                exit={exitControls}
             >
                 <motion.div
                     variants={animation}
