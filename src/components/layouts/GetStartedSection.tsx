@@ -8,7 +8,7 @@ import { TextAnimate, WordAnimate } from "../commons/Animations/TextAnimate"
 export const GetStartedSection = () => {
     return (
         <AppContainer className="pt-10 pb-40 flex flex-col items-center">
-            <Animate className="" once={false} animation={{
+            <Animate once={false} animation={{
                 hidden: {
                     scale: 2,
                     opacity: 0,
