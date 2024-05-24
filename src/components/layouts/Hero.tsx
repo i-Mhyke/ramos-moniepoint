@@ -74,7 +74,7 @@ export const Hero = () => {
                         </Animate>
                     </div>
                     <h1 className="max-[360px]:text-[2.3rem] max-lg:text-[2.5rem] text-[8rem] max-lg:leading-[1.2] leading-[1.1] font-medium mt-5 text-right overflow-y-hidden-hidden">
-                        <TextAnimate text="Analytics" className="" />
+                        <TextAnimate text="Analytics" />
                         <br />
                         <TextAnimate text="that helps you" styleIndex={{
                             index: 1,
@@ -99,18 +99,6 @@ export const Hero = () => {
                             <FiBarChart2 className="text-dark max-lg:text-[2.5rem] text-[7rem] rounded-full max-lg:p-2 p-5 bg-secondary inline" />
                         </Animate>
                         &nbsp;
-                        {/* <TextAnimate className="lg:hidden" text="now" animationDelay={0.5} animation={{
-                                hidden: {
-                                    y: 200,
-                                },
-                                visible: {
-                                    y: 0,
-                                    transition: {
-                                        duration: 1,
-                                        ease: "easeInOut",
-                                    }
-                                },
-                            }} /> */}
                         <TextAnimate text="the future" animationDelay={0.8} animation={{
                                 hidden: {
                                     y: 200,
